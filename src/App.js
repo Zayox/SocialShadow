@@ -7,7 +7,7 @@ import Register from "./components/Register";
 
 function App() {
   return (
-    <div className="h-[100vh] w-[100vw]">
+    <div className="h-[100vh] w-[100vw] overflow-hidden">
         <Router>
             <Navbar />
             <Switch>
