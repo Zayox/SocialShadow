@@ -1,23 +1,13 @@
 import React, {useRef, useState} from 'react';
-import {Link} from "react-router-dom";
-import {auth} from "../firebase";
 import Logo from "../img/logo.png";
+import {Link} from "react-router-dom";
+import {useHistory} from "react-router-dom/cjs/react-router-dom";
 
-const Register = () => {
-
+const ClearData = () => {
 
     const emailRef = useRef(null);
     const passRef = useRef(null);
     const [loggedIn, setLoggedIn] = useState();
-
-
-    const register = (e) => {
-        e.preventDefault();
-        auth.createUserWithEmailAndPassword(emailRef.current.value, passRef.current.value)
-            .then((authUser)=> console.log(authUser))
-            .catch((err) => alert(err))
-    }
-
 
 
     return (
@@ -30,17 +20,15 @@ const Register = () => {
                             src={Logo}
                             alt="Workflow"
                         />
-                        <h2 className="mt-6 text-center text-3xl text-gray-900">Create your account</h2>
+                        <h2 className="mt-6 text-center text-3xl text-gray-900">Clear your data</h2>
                     </div>
-                    <input type="text" placeholder="Email" ref={emailRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                     <input type="email" placeholder="Email" ref={emailRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                     <input placeholder="Password" type="password" ref={passRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
-                    <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300" onClick={register}>Register</button>
-                    <label className="text-md mt-14">Already have an account?<Link to="/login"><span className="ml-2 text-sky-400">Login</span></Link></label>
+                    <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300">ClearData</button>
                 </form>
             </div>
         </div>
     );
 };
 
-export default Register;
+export default ClearData;

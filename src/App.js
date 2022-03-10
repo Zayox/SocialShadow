@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Banner from "./components/Banner";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import ClearData from "./components/ClearData";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
                 </Route>
                 <Route path="/register">
                     <Register/>
+                </Route>
+                <Route path="/cleardata">
+                    <ClearData />
                 </Route>
             </Switch>
         </Router>
