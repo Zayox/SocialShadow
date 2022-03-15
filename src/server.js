@@ -1,41 +1,42 @@
 const express = require('express');
 const puppeteer = require('puppeteer');
+const cors = require('cors');
 require('dotenv').config();
-
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
+app.use(express.json());
 
-app.get("/", async (req, res) => {
-
+app.post("/clear", async (req, res) => {
     try{
-        const browser = await puppeteer.launch();
-        let page = await browser.newPage();
-
-        await page.goto('https://www.instagram.com/?hl=fr');
-        //await page.click('[role=presentation]>div>div>button');
-        await page.waitForSelector("[name=username]");
-        await page.type("[name=username]", "amirmoumen06@yahoo.fr", {delay: 100}); // Types instantly
-        await page.type("[name=password]", "AmirZayoxMDP06", {delay: 100}); // Types instantly
-        await page.click("[type=submit]");
-        await page.waitForSelector('[placeholder=Rechercher]');
-        await page.type('[placeholder=Rechercher]', "ken", {delay: 100}); // Types instantly
-        await page.waitForSelector('[role=none] > a');
-        await page.click('[role=none] > a');
-        await page.waitForSelector('[class=FFVAD]');
-        await page.click('[class=FFVAD]');
-        await page.waitForSelector('[class=fr66n]');
-        await page.click('[class=fr66n]');
-        await console.log("done bro");
-
+        const browser = await puppeteer.launch({headless: true, defaultViewport: null});
+        const [page] = await browser.pages();
+        const url = "https://www.instagram.com/?hl=en";
+        await page.goto(url);
+        await page.waitForSelector('[name=username]');
+        await page.type('[name=username]',req.body.email, {delay: 0});
+        await page.waitForSelector('[name=password]');
+        await page.type('[name=password]',req.body.pass, {delay: 0});
+        await page.click('[type=submit]');
+        await page.waitForSelector('[data-testid="user-avatar"]');
+        await page.click('[data-testid="user-avatar"]');
+        await page.waitForSelector('[href="/accounts/edit/"]');
+        await page.click('[href="/accounts/edit/"]');
+        await page.waitForSelector('[href="/accounts/privacy_and_security/"]');
+        await page.click('[href="/accounts/privacy_and_security/"]');
+        await page.waitForSelector('[class="mwD2G"]');
+        await page.click('[class="mwD2G"]');
+        await page.waitForSelector('[class="aOOlW  bIiDR  "]');
+        await page.click('[class="aOOlW  bIiDR  "]');
+        await console.log("c'est fait les reufs");
         return res.status(200).send("done bro");
+        res.json({
+            success: true
+        })
     }catch (e){
         console.log(e);
         res.status(500).send("Something broke");
     }
 })
-
-
-
-
 app.listen(process.env.PORT || PORT, () => console.log('Server started on PORT: ' + PORT));
