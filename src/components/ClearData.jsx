@@ -9,11 +9,13 @@ const ClearData = () => {
     const emailRef = useRef(null);
     const passRef = useRef(null);
     const [loggedIn, setLoggedIn] = useState();
+    const [response, setResponse] = useState(null);
 
 
     const requestClear = async (e) => {
         e.preventDefault();
-        const res = await fetch('http://localhost:3000/clear', {
+        setResponse(false);
+        const res = await fetch('https://peaceful-sea-48607.herokuapp.com/clear', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -23,7 +25,17 @@ const ClearData = () => {
                 pass: passRef.current.value
             })
         })
-        console.log(res);
+        res ? setResponse(true) : setResponse(false);
+    }
+
+
+    const loading = () => {
+        if(response){
+            return <h1>DONE</h1>
+        }
+        else if(response !==null){
+            return <h1>LOADING...</h1>
+        }
     }
 
 
@@ -43,7 +55,9 @@ const ClearData = () => {
                     <input placeholder="Password" type="password" ref={passRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                     <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300" onClick={requestClear}>ClearData</button>
                 </form>
-            </div>
+                {loading()}
+
+                    </div>
         </div>
     );
 };
