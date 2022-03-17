@@ -7,6 +7,7 @@ import Logo from '../img/logo.png';
 import AmirPhoto from '../img/amir.png';
 import BastienPhoto from '../img/bastien.jpg';
 import NicoPhoto from '../img/nico_2.jpg';
+import BenjaminPhoto from '../img/benjamin.jpg'
 
 const Team = () => {
     return (
@@ -39,7 +40,7 @@ const Team = () => {
                             <div class="max-w-[370px] w-full mx-auto mb-10">
                                 <div class="relative rounded-lg overflow-hidden">
                                     <img
-                                        src="https://cdn.tailgrids.com/1.0/assets/images/team/team-01/image-01.jpg"
+                                        src={BenjaminPhoto}
                                         alt="image"
                                         class="w-full"
                                     />

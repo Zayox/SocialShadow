@@ -15,8 +15,8 @@ const Navbar = ({getLogin, setLogin}) => {
                 <Link to="/"><img src={Logo} alt="logo" className="h-14"/></Link>
             </div>
             <ul className="flex items-center h-[100%] text-xl">
-                <Link to="/"><li className="hover:text-sky-400">Home</li></Link>
-                {getLogin ? <li className="ml-4 text-green-600">Status : connected</li> : <Link to="/login"><li className="ml-4 hover:text-sky-400">Login/Register</li></Link>}
+                <Link to="/"><li className="hover:text-sky-400">Accueil</li></Link>
+                {getLogin ? <li className="ml-4 text-green-600">Status : connected</li> : <Link to="/login"><li className="ml-4 hover:text-sky-400">Se connecter</li></Link>}
                 {getLogin ? <img src={LogoutLogo} alt="logout logo" className="h-6 ml-4 cursor-pointer" onClick={() => {setLogin(false); history.push("/")}}/> : null}
             </ul>
         </div>

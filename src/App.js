@@ -8,6 +8,9 @@ import ClearData from "./components/ClearData";
 import Footer from "./components/Footer";
 import React, {useState} from 'react';
 import Team from './components/Team';
+import About from './components/About';
+import Steps from './components/Steps';
+import FAQ from './components/FAQ';
 
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
                 <Switch>
                     <Route exact path="/">
                         <Banner getLogin={loggedIn}/>
+                        <About />
+                        <Steps />
+                        <FAQ />
                         <Team />
                         <Footer />
                     </Route>
