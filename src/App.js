@@ -17,7 +17,7 @@ function App() {
 
 
     return (
-        <div className="h-[100vh] w-[100vw]">
+        <div className="h-[100vh] w-[100vw] overflow-x-hidden">
             <Router>
                 <Navbar getLogin={loggedIn} setLogin={setLoggedIn}/>
                 <Switch>
