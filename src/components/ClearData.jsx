@@ -4,11 +4,10 @@ import {Link} from "react-router-dom";
 import {useHistory} from "react-router-dom/cjs/react-router-dom";
 
 
-const ClearData = () => {
+const ClearData = ({getLogin, username}) => {
 
     const emailRef = useRef(null);
     const passRef = useRef(null);
-    const [loggedIn, setLoggedIn] = useState();
     const [response, setResponse] = useState(null);
 
 
@@ -40,8 +39,8 @@ const ClearData = () => {
 
 
     return (
-        <div className="w-[100vw] h-[100vh] flex justify-center">
-            <div className="lg:w-[50vw] md:w-[50vw] w-[90vw]">
+        <div className="h-[100vh] flex justify-center">
+            {getLogin ? <div className="lg:w-[50vw] md:w-[50vw] w-[90vw]">
                 <form className="flex flex-col justify-center items-center lg:mt-44 md:mt-44 mt-28 p-14 rounded-2xl shadow-lg">
                     <div>
                         <img
@@ -49,7 +48,7 @@ const ClearData = () => {
                             src={Logo}
                             alt="Workflow"
                         />
-                        <h2 className="mt-6 text-center text-3xl text-gray-900">Clear your data</h2>
+                        <h2 className="mt-6 text-center text-3xl text-gray-900">{username}, it's time to clear your data!</h2>
                     </div>
                     <input type="email" placeholder="Email" ref={emailRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                     <input placeholder="Password" type="password" ref={passRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
@@ -57,7 +56,7 @@ const ClearData = () => {
                 </form>
                 {loading()}
 
-                    </div>
+                    </div> : <h1 className="flex justify-center items-center">You're unable to access this page without being logged in.</h1>}
         </div>
     );
 };

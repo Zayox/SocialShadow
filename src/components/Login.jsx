@@ -1,22 +1,21 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import {Link} from "react-router-dom";
 import {auth} from "../firebase";
 import Logo from "../img/logo.png";
 import {useHistory} from "react-router-dom/cjs/react-router-dom";
 
-const Login = () => {
+const Login = ({setLogin}) => {
 
 
     const emailRef = useRef(null);
     const passRef = useRef(null);
-    const [loggedIn, setLoggedIn] = useState();
     const history = useHistory();
 
 
     const login = (e) => {
         e.preventDefault();
         auth.signInWithEmailAndPassword(emailRef.current.value, passRef.current.value)
-            .then((auth) => {history.push("/cleardata"); setLoggedIn(true)})
+            .then(() => {history.push("/cleardata"); setLogin(true);})
             .catch((err) => alert(err))
     }
 
