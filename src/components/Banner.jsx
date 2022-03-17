@@ -13,7 +13,7 @@ const Banner = ({getLogin}) => {
                 <h1 className="font-bold sm:text-6xl md:text-6xl text-3xl mt-4 lg:text-8xl">Pour un monde obscur</h1>
                 {getLogin ? <Link to="/cleardata"><button className="bg-sky-500 px-5 py-3 font-medium rounded-md text-white hover:bg-sky-400 mt-14 duration-100 hover:mt-12">Start Now!</button></Link> : <Link to="/login"><button className="bg-sky-500 px-5 py-3 font-medium rounded-md text-white hover:bg-sky-400 mt-14 duration-100 hover:mt-12">Start Now!</button></Link>}
             </div>
-            <img src={Mockup} className="mt-36 lg:h-[40rem] md:h-[40rem] sm:h-1/5 h-1/5 lg:ml-[10rem] md:ml-[10rem] animate-[bounce_3s_ease-in-out_infinite]" alt="Iphone Mockup"/>
+            <img src={Mockup} className="lg:block md:block hidden mt-36 lg:h-[40rem] md:h-[40rem] sm:h-1/5 h-1/5 lg:ml-[10rem] md:ml-[10rem] animate-[bounce_3s_ease-in-out_infinite]" alt="Iphone Mockup"/>
         </div>
     );
 };

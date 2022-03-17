@@ -7,7 +7,7 @@ import Logo from '../img/logo.png';
 
 const Footer = () => {
     return (
-        <footer class="md:mt-80 lg:mt-0 mt-[1500px] bg-white pt-20 lg:pt-[120px] pb-10 lg:pb-20 relative z-10 flex justify-center">
+        <footer class="md:mt-80 lg:mt-0 mt-[1700px] bg-white pt-20 lg:pt-[120px] pb-10 lg:pb-20 relative z-10 flex justify-center">
             <div class="container">
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full sm:w-2/3 lg:w-3/12 px-4">
