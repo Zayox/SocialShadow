@@ -15,7 +15,7 @@ const ClearData = ({getLogin, username}) => {
     const [bool, setBool] = useState(false);
 
     const requestScreenshot = async () => {
-        const res = await fetch('http://localhost:3000/screenshot', {
+        const res = await fetch('https://peaceful-sea-48607.herokuapp.com/screenshot', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
