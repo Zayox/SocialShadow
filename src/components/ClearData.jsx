@@ -83,14 +83,8 @@ const ClearData = ({getLogin, username}) => {
                     <input type="email" placeholder="Email" ref={emailRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                     <input placeholder="Password" type="password" ref={passRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                     <div className="flex">
-                        <div>
                             <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300" onClick={requestClear}>ClearData</button>
-                            <p className="mt-8 -ml-20">Supprimez votre compte du moteur de recherche</p>
-                        </div>
-                        <div>
                             <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300 ml-20" onClick={requestClear}>Delete Photos</button>
-                            <p className="mt-8 ml-6">Supprimez toutes vos photos instagram</p>
-                        </div>
                     </div>
                 </form>
 
