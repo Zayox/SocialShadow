@@ -86,7 +86,7 @@ const ClearData = ({getLogin, username}) => {
                             <input placeholder="Password" type="password" className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                             <div className="flex">
                                 <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300" onClick={requestClear}>Disparaître</button>
-                                <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300 ml-20" onClick={requestClear}>Supprimer Photos</button>
+                                <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300 ml-20" onClick={requestClear}>Couper les données vers FB</button>
                             </div>
 
                         </form>
@@ -111,7 +111,7 @@ const ClearData = ({getLogin, username}) => {
                             <input placeholder="Password" type="password" className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                             <div className="flex">
                                 <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300" onClick={requestClear}>Disparaître</button>
-                                <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300 ml-20" onClick={requestClear}>Supprimer Photos</button>
+                                <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300 ml-20" onClick={requestClear}>Couper les données vers Twitter</button>
                             </div>
 
                         </form>
