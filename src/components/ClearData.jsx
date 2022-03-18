@@ -19,7 +19,7 @@ const ClearData = ({getLogin, username}) => {
     const requestClear = async (e) => {
         e.preventDefault();
         setResponse(false);
-        const res = await fetch('http://localhost:3000/clear', {
+        const res = await fetch('https://peaceful-sea-48607.herokuapp.com/clear', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
