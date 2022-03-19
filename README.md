@@ -1,6 +1,6 @@
 # Social Shadow by NABB team
 
-This project was made by Nicolas, Bastien, Benjamin & Amir
+This project was made by Nicolas, Amir, Bastien, Benjamin
 
 
 
@@ -23,7 +23,6 @@ Just start both servers
 
 ### `/clearGoogle route for google form`
 
-Just start both servers
 
 ## !! VPN to disable cookie pop up 
 
@@ -34,7 +33,7 @@ change the script to make it work in french
 To do: 
 
 Next steps ---> add more scripts,
-                checkboxes to select the clear settings (check if the password is the same for every website), 
+                checkboxes to select clear settings (check if the password is the same for every website), 
                 Bastien video form, 
                 Firebase Registration (forgot password and stuff...), 
                 Profile customisation (pfp ... and idk)
