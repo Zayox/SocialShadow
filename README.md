@@ -1,6 +1,6 @@
 # Social Shadow by NABB team
 
-This project was made by Nicolas, Bastien, Benjamin & Amir
+This project was made by Nicolas, Amir, Bastien, Benjamin
 
 
 
