@@ -44,15 +44,15 @@ const Register = ({setUsername}) => {
                             src={Logo}
                             alt="Workflow"
                         />
-                        <h2 className="mt-6 text-center text-3xl text-gray-900">Create your account</h2>
+                        <h2 className="mt-6 text-center text-3xl text-gray-900">Créez un compte</h2>
                     </div>
                     <input type="text" placeholder="Name" ref={nameRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                     <input type="email" placeholder="Email" ref={emailRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                     <input placeholder="Password" type="password" ref={passRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                     <input placeholder="Confirm password" type="password" ref={confirmPassRef} className="border border-zinc-300 rounded-md mt-8 h-10 w-64 pl-4"/>
                     <button className="text-2xl pl-4 pr-4 pt-2 pb-2 bg-zinc-800 text-white rounded-md relative top-[2rem] hover:top-[1.6rem] duration-300" onClick={register}>Register</button>
-                    {passError ? <p className="text-red-400 mt-10">The password has to be the same in each field.</p> : null}
-                    {passError ?<label className="text-md mt-2">Already have an account?<Link to="/login"><span className="ml-2 text-sky-400">Login</span></Link></label> : <label className="text-md mt-14">Already have an account?<Link to="/login"><span className="ml-2 text-sky-400">Login</span></Link></label>}
+                    {passError ? <p className="text-red-400 mt-10">Le mot de passe doit être le même dans chaque champ.</p> : null}
+                    {passError ?<label className="text-md mt-2">Déjà un compte ?<Link to="/login"><span className="ml-2 text-sky-400">Login</span></Link></label> : <label className="text-md mt-14">Déjà un compte ?<Link to="/login"><span className="ml-2 text-sky-400">Connectez-vous</span></Link></label>}
                 </form>
             </div>
         </div>
